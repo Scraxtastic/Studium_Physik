@@ -122,3 +122,43 @@ console.log(`RI: ${RI}, IK = ${IK}`)
  * |
  * |_____________B
  */
+
+//Aufgabe 9
+R = 100
+UR = 8 //V
+UP = 6 //V
+
+//a
+RP = R / 2
+RR = 2 * R
+IP = UP / (R / 2)
+IR = UR / RR
+Ri = (UP - UR) / (IP - IR)
+console.log(Ri + " Ohm")
+
+//b
+//0 = -U0 + URi + U;
+U0 = UP + Ri * IP
+U = U0 - Ri * I
+UP = U0 - Ri * IP
+UR = U0 - Ri * IR
+Ri = (UR-UP)/(IP-IR);
+console.log(Ri + " Ohm");
+IK = U0/Ri;
+console.log(IK + " mA");
+
+
+//Hier ist ein Fehler
+URi = U/(R*I);
+URR = 8; //V
+// 0 = U0+URi + URR;
+U0 = URi + URR;
+console.log(U0);
+U0 = IP+IR*RR;
+console.log(U0);
+
+
+
+
+
+
